@@ -608,20 +608,20 @@ rover.place_rover()
 # Test Area
 #
 
-rover_position = [8,6]
-monster_moves = ["W","W","N","N",]
-non_monster_moves = [["N","N","W","W",],["N","W","N","W",],["N","N","W","W",]]
-easts_available = 4
-wests_available = 4
-norths_available = 4
-souths_available = 4
-monster_moves_to_take = 2
-non_monster_moves_to_take = 2
-monster_time_before = int(time.time())
-monster.possible_to_kill_rover(rover_position, monster_moves, non_monster_moves, monster_moves_to_take, non_monster_moves_to_take)
-monster_time_after = int(time.time())
-
-print(monster_time_after - monster_time_before)
+##rover_position = [8,6]
+##monster_moves = ["W","W","N","N",]
+##non_monster_moves = [["N","N","W","W",],["N","W","N","W",],["N","N","W","W",]]
+##easts_available = 4
+##wests_available = 4
+##norths_available = 4
+##souths_available = 4
+##monster_moves_to_take = 2
+##non_monster_moves_to_take = 2
+##monster_time_before = int(time.time())
+##monster.possible_to_kill_rover(rover_position, monster_moves, non_monster_moves, monster_moves_to_take, non_monster_moves_to_take)
+##monster_time_after = int(time.time())
+##
+##print(monster_time_after - monster_time_before)
 
 #
 # End of test Area
@@ -674,8 +674,9 @@ while victorystate == "None":
         for move in rover_moves:
                 rover_move_index += 1 
                 rover.move_rover(move)
-
-        monster.move_monster(final_monster_move)
+                
+        print monster_moves
+        monster.move_monster(monster_moves)
 
         for player in list_of_players:
                 print player.to_be_shuffled
